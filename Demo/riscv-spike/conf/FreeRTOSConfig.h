@@ -140,4 +140,17 @@ standard names - or at least those used in the unmodified vector table. */
 #define xPortPendSVHandler PendSV_Handler
 #define xPortSysTickHandler SysTick_Handler
 
+/*If the target RISC-V chip includes a machine timer (MTIME) then set configMTIME_BASE_ADDRESS 
+to the MTIME base address and configMTIMECMP_BASE_ADDRESS to the address of the MTIME’s compare 
+register (MTIMECMP). Otherwise set both definitions to 0.*/
+//#define configMTIME_BASE_ADDRESS		( 0x2000BFF8UL )
+//#define configMTIMECMP_BASE_ADDRESS		( 0x20004000UL )
+
+#define configMTIME_BASE_ADDRESS		( 0 )
+#define configMTIMECMP_BASE_ADDRESS		( 0 )
+
+/*Define configISR_STACK_SIZE_WORDS in FreeRTOSConfig.h to the size of the interrupt stack to 
+be allocated. Note the size is defined in words, not bytes. */
+#define configISR_STACK_SIZE_WORDS ( 500 )
+
 #endif /* FREERTOS_CONFIG_H */

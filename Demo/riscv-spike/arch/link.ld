@@ -171,6 +171,7 @@ SECTIONS {
        . += _STACK_SIZE;
        . = ALIGN(4);
        _stack = .;
+       __freertos_irq_stack_top= .;
        __stack = _stack;
     } > dmem
     

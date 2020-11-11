@@ -78,8 +78,8 @@ APP_SRC =  \
 	$(APP_SOURCE_DIR)/recmutex.c
 		
 
-PORT_SRC = $(FREERTOS_SOURCE_DIR)/portable/GCC/RISCV/port.c
-PORT_ASM = $(FREERTOS_SOURCE_DIR)/portable/GCC/RISCV/portasm.S
+PORT_SRC = $(FREERTOS_SOURCE_DIR)/portable/GCC/RISC-V/port.c
+PORT_ASM = $(FREERTOS_SOURCE_DIR)/portable/GCC/RISC-V/portASM.S
 
 DEMO_SRC = \
 	arch/syscalls.c \
@@ -94,7 +94,8 @@ INCLUDES = \
 	-I./include \
 	-I$(FREERTOS_SOURCE_DIR)/include \
 	-I../Common/include \
-	-I$(FREERTOS_SOURCE_DIR)/portable/GCC/RISCV
+	-I$(FREERTOS_SOURCE_DIR)/portable/GCC/RISC-V \
+	-I$(FREERTOS_SOURCE_DIR)/portable/GCC/RISC-V/chip_specific_extensions/RV32I_CLINT_no_extensions
 
 CFLAGS = \
 	$(WARNINGS) $(INCLUDES) \

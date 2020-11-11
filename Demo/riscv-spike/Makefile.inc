@@ -13,7 +13,7 @@ CCPATH	= /home/maarten.in_t.hout/riscv-build
 PROG	= riscv-spike
 CRT0	= arch/boot.S
 
-FREERTOS_SOURCE_DIR	= ../../Source
+FREERTOS_SOURCE_DIR	= ../..
 CUNIT	= ../../../cunit
 
 #-----------------------------------------------------------
